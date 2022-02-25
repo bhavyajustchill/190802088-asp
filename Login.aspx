@@ -35,29 +35,34 @@
                     Sign In</h2>
                 <form id="form1" runat="server">
                 <div class="username">
-                    <span class="username">Username:</span>
-                    <asp:TextBox ID="TextBox1" name="name" class="name" runat="server"></asp:TextBox>
+                    <span class="username">Email:</span>
+                    <asp:TextBox ID="TextBox1" class="name" runat="server"></asp:TextBox>
                     <div class="clearfix">
                     </div>
                 </div>
                 <div class="password-agileits">
                     <span class="username">Password:</span>
-                    <asp:TextBox ID="TextBox2" name="password" class="password" runat="server" 
+                    <asp:TextBox ID="TextBox2" class="password" runat="server" 
                         TextMode="Password"></asp:TextBox>
                     <div class="clearfix">
                     </div>
                 </div>
                 <div class="rem-for-agile">
-                    <input type="checkbox" name="remember" class="remember">Remember me<br>
-                    <asp:CheckBox ID="CheckBox1" runat="server" name="remember" class="remember" />
-                    <a href="#">Forgot Password</a><br>
+                    <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" /><br>
+                    <a href="#"><b>Forgot Password</b></a><br>
                 </div>
                 <div class="login-w3">
-                    <input type="submit" class="login" value="Sign In">
+                    <asp:Button ID="Button1" class="login" runat="server" Text="Sign In" 
+                        onclick="Button1_Click" />
                 </div>
                 <div class="clearfix">
                 </div>
                 </form>
+                
+                <div class="back">
+					 <a href="Registration.aspx"><font color="white">Don't have an Account?</font> Register <font color="white">here</font></a> 
+				</div>
+                
                 <div class="footer">
                     <p>
                         &copy; 2022 JustChill Inc.
