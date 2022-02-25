@@ -14,14 +14,14 @@
     position: relative;
     text-align: center;
     padding: 10px;
-    background:#ddede0;
+    background: #e74c3c;
     height: 48px;
     box-sizing: border-box;
 }
 .monthly-header-title {
     font-size: 1em;
     text-transform: uppercase;
-    color: #000000;
+    color: #ffffff;
 }
 /* wrapper for left button to make the clickable area bigger */
 .monthly-prev {
@@ -81,9 +81,9 @@
 /* Day of the week headings */
 .monthly-day-title-wrap {
     display: table;
-    width: 100.1%;
-    background: #ddede0;
-    border-bottom: 1px solid #c0dbc5;
+    width: 100%;
+    background:#e74c3c;
+    border-bottom: 1px solid #EBEBEB;
     padding-bottom: 1.3em;
 }
 .monthly-day-title-wrap div {
@@ -91,7 +91,7 @@
     display: table-cell;
     box-sizing: border-box;
     position: relative;
-    font-weight: 400;
+    font-weight: bold;
     text-align: center;
     text-transform: uppercase;
     font-size: 1em;
@@ -101,12 +101,12 @@
 /* Calendar days wrapper */
 .monthly-day-wrap {
 	display:table;
-	width:100.1%;
+	width:100%;
 	overflow: hidden;
 }
 .monthly-week {
 	display:table-row;
-	width:100.1%;
+	width:100%;
 }
 /* Calendar Days */
 .monthly-day, .monthly-day-blank {
@@ -117,16 +117,14 @@
     position: relative;
     font-weight: bold;
     color: inherit;
-        background: #ddede0;
-    box-shadow: 0 0 0 1px #c0dbc5;
+    background: #c2d7e4;
+    box-shadow: 0 0 0 1px #EBEBEB;
     -webkit-transition: .25s;
     transition: .25s;
     padding: 0;
     text-decoration: none;
 }
-.monthly-day-event {
-    padding-top: 17px !important; 
-}
+
 /* Trick to make the days' width equal their height */
 .monthly-day:before {
 	content: "";
@@ -142,7 +140,7 @@
 
 /* Days that are part of previous or next month */
 .monthly-day-blank {
-	background:#eef9f0;
+	background:#F3F3F5;
 }
 
 /* Event calendar day number styles */
@@ -190,8 +188,8 @@
 }
 /* Current day style */
 .monthly-today .monthly-day-number {
-    color: #ffffff;
-    background: #000000;
+    color: #FFF;
+    background: #ff9501;
     top: 1px;
     left: 1px;
     font-size: 13px;
