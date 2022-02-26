@@ -22,7 +22,6 @@ public partial class Login : System.Web.UI.Page
             SqlCommand cmd = new SqlCommand("SELECT COUNT(*) FROM [users] WHERE [email] = @email AND [password] = @password", con);
             cmd.Parameters.AddWithValue("@email", TextBox1.Text.Trim());
             cmd.Parameters.AddWithValue("@password", TextBox2.Text.Trim());
-
             con.Open();
             int s = (int)cmd.ExecuteScalar();
             if (s >= 1)
@@ -30,7 +29,8 @@ public partial class Login : System.Web.UI.Page
                 Session["email"] = TextBox1.Text;
                 TextBox1.Text = string.Empty;
                 TextBox2.Text = string.Empty;
-                Response.Redirect("~/Default.aspx");
+                Literal1.Text = string.Empty;
+                Response.Redirect("~/Dashboard.aspx");
             }
             else
             {
