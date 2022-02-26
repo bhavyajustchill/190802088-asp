@@ -47,7 +47,8 @@
                     <div class="clearfix">
                     </div>
                 </div>
-                <div class="rem-for-agile">
+                <div class="rem-for-agile" style="font-weight: bold">
+                    &nbsp;&nbsp; &nbsp; &nbsp;<asp:Literal ID="Literal1" runat="server"></asp:Literal><br />
                     <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" /><br>
                     <a href="#"><b>Forgot Password</b></a><br>
                 </div>
