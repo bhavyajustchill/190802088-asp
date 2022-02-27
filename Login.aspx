@@ -57,7 +57,7 @@
                     <asp:ValidationSummary ID="ValidationSummary1" runat="server" ValidationGroup="insertData" />
                     <br />
                     <asp:CheckBox ID="CheckBox1" runat="server" Text="Remember me" /><br>
-                    <a href="#"><b>Forgot Password</b></a><br>
+                    <a href="ForgotPassword.aspx"><b>Forgot Password</b></a><br>
                 </div>
                 <div class="login-w3">
                     <asp:Button ID="Button1" class="login" runat="server" Text="Sign In" OnClick="Button1_Click"
