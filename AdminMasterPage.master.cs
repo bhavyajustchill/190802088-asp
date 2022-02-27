@@ -20,13 +20,26 @@ public partial class AdminMasterPage : System.Web.UI.MasterPage
         }
         else
         {
-            string email1 = Session["email"].ToString();
-            SqlCommand cmd = new SqlCommand("SELECT [fullname] FROM [users] WHERE [email] = @email", con);
-            cmd.Parameters.AddWithValue("@email", email1);
-            con.Open();
-            string fullname = cmd.ExecuteScalar().ToString();
-            Literal1.Text = fullname;
-            Literal2.Text = email1;
+            if (Request.Cookies["email"] != null && Request.Cookies["password"] != null)
+            {
+                string email1 = Request.Cookies["email"].Value;
+                SqlCommand cmd = new SqlCommand("SELECT [fullname] FROM [users] WHERE [email] = @email", con);
+                cmd.Parameters.AddWithValue("@email", email1);
+                con.Open();
+                string fullname = cmd.ExecuteScalar().ToString();
+                Literal1.Text = fullname;
+                Literal2.Text = email1;
+            }
+            else
+            {
+                string email1 = Session["email"].ToString();
+                SqlCommand cmd = new SqlCommand("SELECT [fullname] FROM [users] WHERE [email] = @email", con);
+                cmd.Parameters.AddWithValue("@email", email1);
+                con.Open();
+                string fullname = cmd.ExecuteScalar().ToString();
+                Literal1.Text = fullname;
+                Literal2.Text = email1;
+            }
         }
     
     }
@@ -43,6 +56,8 @@ public partial class AdminMasterPage : System.Web.UI.MasterPage
     protected void LinkButton3_Click(object sender, EventArgs e)
     {
         Session["email"] = null;
+        Response.Cookies["email"].Expires = DateTime.Now.AddDays(-1);
+        Response.Cookies["password"].Expires = DateTime.Now.AddDays(-1);
         Response.Redirect("~/Login.aspx");
     }
 }

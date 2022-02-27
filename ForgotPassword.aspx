@@ -26,24 +26,45 @@
 <!-- //lined-icons -->
 </head>
 <body>
-<center><h2>Reset Password Form</h2></center>
 <form id="form1" runat="server">
+<center><h2>Reset Password Form</h2></center>
   <div class="form-group" style="padding:0px 50px;">
     <label for="exampleInputEmail1">Email address</label>
-      <asp:DropDownList ID="DropDownList1" class="form-control" runat="server">
+      <asp:DropDownList ID="DropDownList1" class="form-control" runat="server" 
+          ValidationGroup="updatePassword">
       </asp:DropDownList>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" 
+          ControlToValidate="DropDownList1" Display="Dynamic" 
+          ErrorMessage="Please select an Email addreess" ForeColor="Red" InitialValue="0" 
+          ValidationGroup="updatePassword">*</asp:RequiredFieldValidator>
   </div>
   <div class="form-group" style="padding:0px 50px;">
     <label for="exampleInputPassword1">New Password</label>
     <asp:TextBox ID="TextBox1" class="form-control" runat="server" 
-          TextMode="Password"></asp:TextBox>
+          TextMode="Password" ValidationGroup="updatePassword"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator2" runat="server" 
+          ControlToValidate="TextBox1" Display="Dynamic" 
+          ErrorMessage="New Password Required!" ForeColor="Red" 
+          ValidationGroup="updatePassword">*</asp:RequiredFieldValidator>
     </div>
   <div class="form-group" style="padding:0px 50px;">
     <label for="exampleInputPassword1">Confirm New Password</label>
     <asp:TextBox ID="TextBox2" class="form-control" runat="server" 
-          TextMode="Password"></asp:TextBox><br />
+          TextMode="Password" ValidationGroup="updatePassword"></asp:TextBox>
+      <asp:RequiredFieldValidator ID="RequiredFieldValidator3" runat="server" 
+          ControlToValidate="TextBox2" Display="Dynamic" 
+          ErrorMessage="Please confirm the new Password!" ForeColor="Red" 
+          ValidationGroup="updatePassword">*</asp:RequiredFieldValidator>
+      <asp:CompareValidator ID="CompareValidator1" runat="server" 
+          ControlToCompare="TextBox1" ControlToValidate="TextBox2" 
+          ErrorMessage="Passwords don't Match!" ForeColor="Red" 
+          ValidationGroup="updatePassword">*</asp:CompareValidator>
+      <asp:ValidationSummary ID="ValidationSummary1" runat="server" ForeColor="Red" 
+          ValidationGroup="updatePassword" />
+      <br />
       <asp:Button ID="Button1" class="btn-primary btn" runat="server" 
-          Text="Reset Password" onclick="Button1_Click" />
+          Text="Reset Password" onclick="Button1_Click" 
+          ValidationGroup="updatePassword" />
   </div>
 </form>
     <script>

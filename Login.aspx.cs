@@ -26,7 +26,20 @@ public partial class Login : System.Web.UI.Page
             int s = (int)cmd.ExecuteScalar();
             if (s >= 1)
             {
-                Session["email"] = TextBox1.Text;
+                if (CheckBox1.Checked)
+                {
+                    Response.Cookies["email"].Value = TextBox1.Text;
+                    Response.Cookies["password"].Value = TextBox2.Text;
+                    Response.Cookies["email"].Expires = DateTime.Now.AddDays(30);
+                    Response.Cookies["password"].Expires = DateTime.Now.AddDays(30); 
+                    Session["email"] = TextBox1.Text;
+                }
+                else
+                {
+                    Response.Cookies["email"].Expires = DateTime.Now.AddDays(-1);
+                    Response.Cookies["password"].Expires = DateTime.Now.AddDays(-1);
+                    Session["email"] = TextBox1.Text;
+                }
                 TextBox1.Text = string.Empty;
                 TextBox2.Text = string.Empty;
                 Literal1.Text = string.Empty;
