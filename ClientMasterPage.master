@@ -1,0 +1,318 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="ClientMasterPage.master.cs"
+    Inherits="ClientMasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="keywords" content="Digebiz Responsive web template, Bootstrap Web Templates" />
+    <title>Home</title>
+    <link href="//fonts.googleapis.com/css2?family=Hind+Siliguri:wght@300;400;600;700&display=swap"
+        rel="stylesheet">
+    <!-- Template CSS -->
+    <link rel="stylesheet" href="src/assets/css/style-starter.css">
+</head>
+<body>
+    <!--header-->
+    <header id="site-header" class="fixed-top">
+    <!-- //top header -->
+    <div class="container">
+      <nav class="navbar navbar-expand-lg stroke px-0 py-lg-0">
+        <h1><a class="navbar-brand" href="index.html">
+            Dige<span class="sub-logo">b</span>iz</span>
+          </a></h1>
+        <!-- if logo is image enable this   
+    <a class="navbar-brand" href="#index.html">
+        <img src="image-path" alt="Your logo" title="Your logo" style="height:35px;" />
+    </a> -->
+        <button class="navbar-toggler  collapsed bg-gradient" type="button" data-toggle="collapse"
+          data-target="#navbarTogglerDemo02" aria-controls="navbarTogglerDemo02" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon fa icon-expand fa-bars"></span>
+          <span class="navbar-toggler-icon fa icon-close fa-times"></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbarTogglerDemo02">
+          <ul class="navbar-nav mx-lg-auto">
+            <li class="nav-item active">
+              <a class="nav-link" href="Default.aspx">Home <span class="sr-only">(current)</span></a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="About.aspx">About</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Services.aspx">Services</a>
+            </li>
+           
+            <li class="nav-item">
+              <a class="nav-link" href="Contact.aspx">Contact</a>
+            </li>
+            <!--/search-right-->
+            <li class="nav-item search-right ml-lg-3">
+              <!-- /header-top-inn-->
+              <div class="menu-overlay-left">
+                <div class="two-pops">
+                  <!-- overlay-menuv-menu -->
+                  <div class="overlay-menuv-hny">
+                    <input type="checkbox" id="op"></input>
+                    <div class="side-menu-hny mt-lg-3">
+                      <label for="op" class="menuopen">
+                        <span class="fa fa-search" aria-hidden="true"></span></label>
+                    </div>
+                    <div class="overlay-menuv overlay-menuv-hugeinc">
+                      <label for="op" class="menuclose"><span class="fa fa-times" aria-hidden="true"></span></label>
+                      <div class="side-show-content text-left">
+
+                        <div class="quick-links-side mb-5 pt-lg-5">
+                          <h3 class="side-title">Search Here</h3>
+                          <form action="#" method="post" class="search-box">
+                            <input type="search" placeholder="Keyword" name="search" required="required" autofocus="">
+                            <button type="submit" class="btn btn-style mt-3">Search</button>
+                          </form>
+
+                        </div>
+
+                        <div class="quick-links-side follow-us mb-5">
+                          <h3 class="side-title">Follow Us</h3>
+                          <ul class="social-icons-top">
+                            <li><a class="facebook" href="#"><span class="fa fa-facebook" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a class="twitter" href="#"><span class="fa fa-twitter" aria-hidden="true"></span></a>
+                            </li>
+                            <li><a class="google" href="#"><span class="fa fa-google-plus"
+                                  aria-hidden="true"></span></a>
+                            </li>
+                            <li><a class="instagram" href="#"><span class="fa fa-instagram"
+                                  aria-hidden="true"></span></a>
+                            </li>
+                          </ul>
+                        </div>
+                      </div>
+
+                    </div>
+                  </div>
+                </div>
+                <!-- overlay-menuv-menu -->
+            </li>
+            <!--//search-right-->
+          </ul>
+          <!--/right-btn-->
+          <div class="top-righthny-buttton">
+            <a class="btn btn-style btn-white mr-lg-5" href="contact.html">
+              Get In Touch <span class="fa fa-long-arrow-right ml-3" aria-hidden="true"></span></a>
+          </div>
+          <!--/right-btn-->
+        </div>
+        <!-- toggle switch for light and dark theme -->
+        <div class="mobile-position">
+          <nav class="navigation">
+            <div class="theme-switch-wrapper">
+              <label class="theme-switch" for="checkbox">
+                <input type="checkbox" id="checkbox">
+                <div class="mode-container">
+                  <i class="gg-sun"></i>
+                  <i class="gg-moon"></i>
+                </div>
+              </label>
+            </div>
+          </nav>
+        </div>
+        <!-- //toggle switch for light and dark theme -->
+      </nav>
+    </div>
+  </header>
+    <!--/header-->
+    <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+    </asp:ContentPlaceHolder>
+    <!-- footer -->
+    <section class="w3l-footer-29-main">
+    <div class="footer-29 py-5">
+      <div class="container py-lg-3">
+        <div class="row footer-top-29">
+          <div class="col-lg-4 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4 pr-lg-5">
+            <div class="footer-logo mb-3">
+              <h2><a class="navbar-brand" href="index.html">
+                  Dige<span class="sub-logo">b</span>iz</span>
+                </a>
+              </h2>
+            </div>
+            <p>Lorem ipsum viverra feugiat. Pellen tesque libero ut justo,
+              ultrices in ligula. Semper at tempufddfel.Pellen tesque libero ut justo,
+              ultrices in ligula.
+            </p>
+          </div>
+          <div class="col-lg-8 footerw3l-right pl-lg-5">
+            <div class="row no-gutters">
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <h6 class="footer-title-29">Want to work with us?</h6>
+                <p>Use This Email</p>
+                <p class="mt-2"> <a href="mailto:mail@example.com">mail@example.com</a></p>
+              </div>
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <h6 class="footer-title-29">Want to say hi?</h6>
+                <p>Genenaral Inquires</p>
+                <p class="mt-2"> <a href="mailto:support@example.com">support@example.com</a></p>
+              </div>
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <h6 class="footer-title-29">Find us on social media.</h6>
+                <p class="mt-2">Social Media</p>
+
+                <div class="main-social-footer-29 mt-2">
+                  <a href="#facebook" class="facebook"><span class="fa fa-facebook"></span></a>
+                  <a href="#twitter" class="twitter"><span class="fa fa-twitter"></span></a>
+                  <a href="#instagram" class="instagram"><span class="fa fa-instagram"></span></a>
+                </div>
+              </div>
+            </div>
+            <div class="row no-gutters mt-5">
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <ul>
+                  <h6 class="footer-title-29">Company</h6>
+                  <li><a href="#careers"> Careers</a></li>
+                  <li><a href="#news">News & Media</a></li>
+                  <li><a href="contact.html">Contact us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <h6 class="footer-title-29">What We Do</h6>
+                <ul>
+                  <li><a href="about.html">About Us</a></li>
+                  <li><a href="#"> Blog Posts</a></li>
+                  <li><a href="services.html">Services</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4 col-sm-6 footer-list-29 footer-2 mt-lg-0 mt-md-5 mt-4">
+                <h6 class="footer-title-29">Quick Links</h6>
+                <ul>
+                  <li><a href="#terms">Terms of service</a></li>
+                  <li><a href="#privacy"> Privacy policy</a></li>
+
+                  <li><a href="#support"> Support</a></li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+    <!-- //footer -->
+    <!-- copyright -->
+    <section class="w3l-copyright">
+    <div class="container">
+      <div class="bottom-copies text-center">
+        <p class=" copy-footer-29">© 2021 Digebiz.Made with <span class="fa fa-heart" aria-hidden="true"></span> love
+          Design by<a href="https://w3layouts.com/" target="_blank">
+            W3layouts</a></p>
+      </div>
+    </div>
+
+    <!-- move top -->
+    <button onclick="topFunction()" id="movetop" title="Go to top">
+      &#10548;
+    </button>
+    <script>
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("movetop").style.display = "block";
+            } else {
+                document.getElementById("movetop").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 0;
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+    <!-- /move top -->
+  </section>
+    <!-- //copyright -->
+    <!--//footer-->
+    <!-- Template JavaScript -->
+    <script src="src/assets/js/jquery-3.3.1.min.js"></script>
+    <script src="src/assets/js/theme-change.js"></script>
+    <script src="src/assets/js/owl.carousel.js"></script>
+    <!-- owl carousel -->
+    <!-- script for tesimonials carousel slider -->
+    <script>
+        $(document).ready(function () {
+            $("#owl-demo1").owlCarousel({
+                loop: true,
+                margin: 20,
+                nav: false,
+                responsiveClass: true,
+                responsive: {
+                    0: {
+                        items: 1,
+                        nav: false
+                    },
+                    1000: {
+                        items: 2,
+                        nav: false,
+                        loop: false
+                    }
+                }
+            })
+        })
+    </script>
+    <!-- //script for tesimonials carousel slider -->
+    <!-- stats number counter-->
+    <script src="src/assets/js/jquery.waypoints.min.js"></script>
+    <script src="src/assets/js/jquery.countup.js"></script>
+    <script>
+        $('.counter').countUp();
+    </script>
+    <!-- //stats number counter -->
+    <!-- disable body scroll which navbar is in active -->
+    <script>
+        $(function () {
+            $('.navbar-toggler').click(function () {
+                $('body').toggleClass('noscroll');
+            })
+        });
+    </script>
+    <!-- disable body scroll which navbar is in active -->
+    <!--/MENU-JS-->
+    <script>
+        $(window).on("scroll", function () {
+            var scroll = $(window).scrollTop();
+
+            if (scroll >= 80) {
+                $("#site-header").addClass("nav-fixed");
+            } else {
+                $("#site-header").removeClass("nav-fixed");
+            }
+        });
+
+        //Main navigation Active Class Add Remove
+        $(".navbar-toggler").on("click", function () {
+            $("header").toggleClass("active");
+        });
+        $(document).on("ready", function () {
+            if ($(window).width() > 991) {
+                $("header").removeClass("active");
+            }
+            $(window).on("resize", function () {
+                if ($(window).width() > 991) {
+                    $("header").removeClass("active");
+                }
+            });
+        });
+    </script>
+    <!--//MENU-JS-->
+    <script src="src/assets/js/bootstrap.min.js"></script>
+    <%-- <form id="form1" runat="server">
+    <div>
+    </div>
+    </form>--%>
+</body>
+</html>
