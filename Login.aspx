@@ -36,6 +36,13 @@
                 <form id="form1" runat="server">
                 <div class="username">
                     <span class="username">
+                        <asp:RegularExpressionValidator
+                        ID="RegularExpressionValidator1" runat="server" 
+                    ErrorMessage="Invalid Email Address!" BackColor="Transparent" 
+                    ControlToValidate="TextBox1" ForeColor="White" 
+                    ValidationGroup="insertData" EnableTheming="False" style="padding:0px;" 
+                    Display="Dynamic" 
+                    ValidationExpression="\w+([-+.]\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*">*</asp:RegularExpressionValidator>
                         <asp:RequiredFieldValidator ID="RequiredFieldValidator1" runat="server" ErrorMessage="Email Required!"
                             ControlToValidate="TextBox1" ValidationGroup="insertData" BackColor="Transparent"
                             ForeColor="White" Display="Dynamic" style="padding:0px;">*</asp:RequiredFieldValidator>Email:</span>
